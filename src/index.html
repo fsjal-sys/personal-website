@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>2kPILOT - HOME</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script>
+            let articles = ["Article 1", "Article 2", "Article 3", "Article 4"];
+            let images = ["https://res.cloudinary.com/adaptiveimages-ncc/image/upload/f_auto,dpr_auto,q_auto,fl_progressive/episerver/ca9e2db0-f5d3-414f-8d99-6d4772b5dea2/datacenter_ncc.jpg",
+                        "https://www.yorku.ca/uit/wp-content/uploads/sites/300/2020/04/Lap-Pic2.jpg",
+                        "https://www.thoughtco.com/thmb/FU4GwHf9m__TD0tsOKJPcX6Ru_Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/wave-pattern-desert-landscape--oman-886145780-5c45542046e0fb00012ebabf.jpg",
+                        "https://www.kaspersky.com/content/en-global/images/repository/isc/2017-images/virus-img-10.jpg"];
+            
+            const buttons = document.getElementsByClassName("article-nav");
+            let title = document.getElementById("Article-Title")
+            let image = document.getElementById("Main-Article");
+            let articlePreview = document.getElementById("Article-Preview");
+            let readMoreLink = document.getElementById("Read-More-Link");
+
+            function resetNavColors() {
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].style.backgroundColor = ""; // Reset the color to the default
+                }
+            }
+
+            for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function() {
+                resetNavColors();
+                buttons[i].style.backgroundColor = "#2e344f";
+                // Update the article content as needed
+            });
+            }
+        </script>
+    </head>
+    
+    <body>
+
+        <div id="Banner">
+            <h1>2kPILOT</h1>
+            <img id="bit" src="./images/bit.png"/>
+        </div>
+
+        <div id="Navigator">
+            <a href="/index"><h2>HOME</h2></a>
+            <a href="/about"><h2>ABOUT</h2></a>
+            <a href="/articles"><h2>ARTICLES</h2></a>
+            <a href="/contact"><h2>CONTACT</h2></a>
+        </div>
+
+        <div class="content">
+            <img id="homeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/640px-Rub_al_Khali_002.JPG">
+            <div id="Content-Right">
+                <h1 id="Greeting">
+                    Welcome
+                </h1>
+                <p id="Greeting-Message">
+
+                </p>
+            </div>
+        </div>
+
+        <div id="Footer">
+            <p>2kPILOT 2023</p>
+        </div>
+
+    </body>
+</html>
