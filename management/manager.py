@@ -6,7 +6,7 @@ def get_block(title, date, preview):
                     <h1 class="article-title">{title}</h1>
                     <i class="article-date">{date}</i>
                     <p class="article-preview-text">{preview}</p>
-                    <a href="../src/articles/{to_camel_case(title)}.html" class="read-more-link">>>Read More</a>
+                    <a href="/articles/{to_camel_case(title)}.html" class="read-more-link">>>Read More</a>
                 </div>
     '''
 
@@ -63,7 +63,7 @@ def insert_new_article(filepath, block):
 def create_html_file(title, content):
     title = to_camel_case(title)
 
-    file_path = f"../src/articles/{title}.html"
+    file_path = f"../articles/{title}.html"
     with open(file_path, 'w') as file:
         file.write(content)
 
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     preview = input("Enter article preview: ")
 
     block = get_block(title, date, preview)
-    file_path = os.path.join(os.getcwd(), "../src/articles.html")
+    file_path = os.path.abspath("../articles.html")
     insert_new_article(file_path, block)
 
     article_block = get_article_block()

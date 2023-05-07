@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>2kPILOT - HOME</title>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+        <script>
+
+        </script>
+    </head>
+    
+    <body>
+
+        <div id="Banner">
+            <h1>2kPILOT</h1>
+            <img id="bit" src="../images/bit.png"/>
+        </div>
+
+        <div id="Navigator">
+            <a href="../index.html"><h2>HOME</h2></a>
+            <a href="../articles.html"><h2>ARTICLES</h2></a>
+            <a href="../contact.html"><h2>CONTACT</h2></a>
+        </div>
+
+        <div class="content">
+            <div class="article-Content-Wrapper">
+                <h1>Developing this website</h1>
+<p><em>May 6, 2023</em></p>
+<p>Recently I've been writing a lot of notes out in Markdown. This eventually led me to want to start posting my notes onto a website. Most people would probably do this using Jekyll or Hugo, which are pretty solid options. I decided to develop my own simple website from scratch. It would definitely be a lot easier to just use a static site generator, but I just felt like creating this, so I created this :)</p>
+<p>I was thinking of using something like ReactJS but just decided to go with vanilla HTML, CSS, and JavaScript. Maybe one day I'll make my own large webapp using a big framework, or maybe I'll just procastinate on that forever. </p>
+<p>This website uses a custom CMS (Content Management System) written in Python. Actually I kind of feel like calling it a CMS is kind of pretentious, it's literally just a single Python script. But it works, it adds content to the website pretty fast, which is cool.</p>
+<p>I'll post some notes on here soon, I mainly wrote this article just to test out how the article is going to look.</p>
+<h2>How the site works:</h2>
+<p>So basically, the site has three main directories: The root directory which contains all of the base files (index.html, contact.html, styles.css, etc).
+Within this root directory, there's four sub-directories: articles, markdown_articles, images, and management. </p>
+<p>The management directory contains the CMS script, appropriately named manager.py. The markdown_articles directory is to contain all of my Markdown articles and the articles directory is where the respective HTML files for the articles are to be stored. I use the command-line a lot, so in order to push an article to my website, I made it so I just have to open the terminal in the management directory and run a command:</p>
+<div class="code"><pre><code>user@host management % python3 manager.py
+Enter the name of the article: This is an Article Title
+Enter the date: May 6, 2023
+Enter the preview text: This article is about . . .
+Enter the name of the Markdown file: This-Article.md</code></pre></div>
+<p>And then the python script automaticlly goes in and adds the appropratiate HTML elements in the appropriate file. Then it automatically creates a new HTML file. Finally it reads the Markdown file, converts that into HTML, and then updates the newly created file to contain the new HTML.</p>
+<p>It's pretty amateurish I will admit... but it's simple, and it works :)))</p><!--LAST-->
+            </div>
+        </div>
+
+        <div id="Footer">
+            <p>2kPILOT 2023</p>
+        </div>
+
+    </body>
+</html>
+    
