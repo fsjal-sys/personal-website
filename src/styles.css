@@ -58,13 +58,13 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: rgb(0,0,0,0.2);
     font-family: 'Bruno Ace', cursive;
 }
 
 #Navigator h2 {
-    margin: 60px;
+    margin: 80px;
 }
 
 #Navigator h2 {
@@ -74,8 +74,7 @@ body {
 }
   
 #Navigator h2:hover {
-    border-bottom-color: rgb(181, 0, 0);
-    border-top-color: rgb(181, 0, 0);
+    border-color: rgb(181, 0, 0);
     color: rgb(181, 0, 0);
     font-size: 30px;
 }
@@ -87,11 +86,60 @@ body {
   
 .content {
   min-height: 300px;
+  background-image: linear-gradient(to bottom right, #ddddff, #cbcbcb, #bdd8ff);
+  color:black;
+  padding: 50px;
+}
+
+#Home-Wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, #ddddff, #cbcbcb, #bdd8ff);
-  color:black;
+}
+
+#Content-Right {
+  display: block;
+  height: 400px;
+}
+
+#Content-Right h1, p {
+  margin: 40px;
+}
+
+#Home-Image {
+  width: 500px;
+  height: 300px;
+  box-shadow: 0 12px 24px black;
+  margin-right: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+#Greeting-Message {
+  font-size: 20px;
+}
+
+#Greeting-Nav-Wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.greeting-nav {
+  height: 20px;
+  width: 20px;
+  background-color: #637a92;
+  border-radius: 100%;
+  transition: 0.5s;
+  margin: 20px;
+}
+
+.greeting-nav:hover {
+  cursor: pointer;
+  background-color: #4b5e71;
+}
+
+.greeting-nav-dark {
+  background-color: #152028;
 }
 
 @keyframes fade {
@@ -100,6 +148,37 @@ body {
   } to {
     opacity: 1;
   }
+}
+
+.article {
+  margin-bottom: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin: 10px;
+  padding: 10px;
+}
+
+.article:hover {
+  background-color: rgb(0,0,0,0.1);
+}
+
+.article * {
+  margin: 10px;
+}
+
+.article p {
+  margin-top: 10px;
+}
+
+.read-more-link {
+  transition: 0.2s;
+  color: rgb(181, 0, 0);
+}
+
+.read-more-link:hover {
+  background-color: rgb(181, 0, 0);
+  color: white;
+  font-size: 18px;
 }
 
 #Footer {
