@@ -16,7 +16,7 @@ def get_article_block():
 
 <html>
     <head>
-        <title>2kPILOT - HOME</title>
+        <title>2kPILOT</title>
         <link rel="stylesheet" type="text/css" href="../styles.css">
         <script>
 

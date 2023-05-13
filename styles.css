@@ -70,7 +70,7 @@ body {
 #Navigator h2 {
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
 }
   
 #Navigator h2:hover {
