@@ -1,0 +1,8 @@
+                <div class="article">
+                    <div class="article-right">
+                    <h1 class="article-title">TITLE</h1>
+                    <i class="article-date">DATE</i>
+                    <p class="article-preview-text">PREVIEW</p>
+                    <a href="#" class="read-more-link">>>Read More</a>
+                    </div>
+                </div>

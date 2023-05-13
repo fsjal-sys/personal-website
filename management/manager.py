@@ -1,4 +1,5 @@
 import os, markdown
+from bs4 import BeautifulSoup
 
 def get_block(title, date, preview):
     return f'''
@@ -6,7 +7,7 @@ def get_block(title, date, preview):
                     <h1 class="article-title">{title}</h1>
                     <i class="article-date">{date}</i>
                     <p class="article-preview-text">{preview}</p>
-                    <a href="/articles/{to_camel_case(title)}.html" class="read-more-link">>>Read More</a>
+                    <a href="./articles/{to_camel_case(title)}.html" class="read-more-link">>>Read More</a>
                 </div>
     '''
 
@@ -87,6 +88,21 @@ def markdown_to_html(markdown_article_title):
 
     return html_content
 
+def format_code(filepath):
+    with open(filepath, 'r') as f:
+        contents = f.read()
+
+    soup = BeautifulSoup(contents, 'html.parser')
+
+    p_tags = soup.find_all('p')
+    for p in p_tags:
+        if p.code:  # if the <p> tag contains a <code> tag
+            p['class'] = p.get('class', []) + ['code']  # add "code" class
+
+    # Write the changes back to the file
+    with open(filepath, 'w') as f:
+        f.write(str(soup))
+
 def to_camel_case(s):
     words = s.split()
     return words[0].lower() + ''.join(word.capitalize() for word in words[1:])
@@ -107,3 +123,4 @@ if __name__ == "__main__":
     html_content = markdown_to_html(markdown_article_title)
 
     insert_html_block(file_path, html_content)
+    format_code(file_path)
