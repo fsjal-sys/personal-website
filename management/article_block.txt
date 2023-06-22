@@ -17,7 +17,7 @@
         <div id="Navigator">
             <a href="../index.html"><h2>HOME</h2></a>
             <a href="../articles.html"><h2>ARTICLES</h2></a>
-            <a href="../contact.html"><h2>CONTACT</h2></a>
+            <a href="../socials.html"><h2>SOCIALS</h2></a>
         </div>
 
         <div class="content">

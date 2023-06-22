@@ -4,64 +4,6 @@
     <head>
         <title>2kPILOT</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script>
-            let titles = [
-                "Hello,",
-                "About this Website",
-                "Technicalities"
-            ]
-            let bodies = [
-                "Welcome to my little website. Thanks for stopping by.",
-                "This website serves as a place for me to share my thoughts, notes, anything I find interesting, etc.",
-                "I developed this website in vanilla JavaScript, CSS, and HTML. It serves a simple purpose so I built it in a simple way.\nI'm managing this website using a custom content management script written in Python."
-            ]
-            let images = [
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/AIBO_ERS-111_-_July_2010.jpg/640px-AIBO_ERS-111_-_July_2010.jpg",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Clouds_over_the_Atlantic_Ocean.jpg/640px-Clouds_over_the_Atlantic_Ocean.jpg",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/640px-Rub_al_Khali_002.JPG"
-            ]
-
-            document.addEventListener("DOMContentLoaded", function () {
-                let title = document.getElementById("Greeting");
-                let body = document.getElementById("Greeting-Message");
-                let image = document.getElementById("Home-Image");
-                let greetingNavs = document.getElementsByClassName("greeting-nav");
-
-                // Set the initial active greeting-nav
-                setActiveGreetingNav(0);
-
-                for (let i = 0; i < greetingNavs.length; i++) {
-                    greetingNavs[i].addEventListener("click", function () {
-                        setActiveGreetingNav(i);
-
-                        title.innerHTML = titles[i];
-                        title.style.animation = 'none';
-                        void title.offsetWidth;
-                        title.style.animation = "fade 3s";
-
-                        body.innerHTML = bodies[i];
-                        body.style.animation = 'none';
-                        void body.offsetWidth;
-                        body.style.animation = "fade 3s";
-                        
-                        image.src = images[i];
-                        image.style.animation = 'none';
-                        void image.offsetWidth;
-                        image.style.animation = "fade 3s";
-                    });
-                }
-
-                function setActiveGreetingNav(index) {
-                    for (let i = 0; i < greetingNavs.length; i++) {
-                        if (i === index) {
-                            greetingNavs[i].classList.add("greeting-nav-dark");
-                        } else {
-                            greetingNavs[i].classList.remove("greeting-nav-dark");
-                        }
-                    }
-                }
-            });
-        </script>
     </head>
     
     <body>
@@ -74,25 +16,21 @@
         <div id="Navigator">
             <a href="./index.html"><h2>HOME</h2></a>
             <a href="./articles.html"><h2>ARTICLES</h2></a>
-            <a href="./contact.html"><h2>CONTACT</h2></a>
+            <a href="./socials.html"><h2>SOCIALS</h2></a>
         </div>
 
-        <div class="content">
-            <div id="Home-Wrapper">
-            <img id="Home-Image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/AIBO_ERS-111_-_July_2010.jpg/640px-AIBO_ERS-111_-_July_2010.jpg">
-            <div id="Content-Right">
-                <h1 id="Greeting">
-                    Hello,
-                </h1>
-                <p id="Greeting-Message">
-                    Welcome to my little website. Thanks for stopping by.
-                </p>
-                <div id="Greeting-Nav-Wrapper">
-                    <div class="greeting-nav"></div>
-                    <div class="greeting-nav"></div>
-                    <div class="greeting-nav"></div>
-                </div>
+        <div class="content" id="HomeContent">
+            <div id="HomeContentNav">
+
             </div>
+            <div id="HomeContentGreeting">
+                <h1>Hello there!</h1>
+                <p>Welcome to my personal website. I'm happy to have you here.</p>
+                <p>I'm extremely passionate about technology and its useful applications in daily life, from automation to its paramount ability to connect us in meaningful ways.
+                With a deep love for technology, I embark on a journey of exploration and self-expression through this website.</p>
+                <p>Here, you will find a collection of my thoughts, experiences, and creative endeavours, all wrapperd in the beauty of words and visuals.</p>
+                <p>Join me as we dive into the realm of my interests and discover the wonders it has to offer. Together, let's celebrate curiosity, embrace growth, and ignite our imagination.</p>
+                <p>Thank you for visiting, and I hope you find inspiration and enjoyment during your time here.</p>
             </div>
         </div>
 
