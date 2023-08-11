@@ -1,0 +1,300 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #111826;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+}
+
+body * {
+    transition: 0.1s;
+}
+
+body.dark-mode {
+    background-color: #111826;
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #111826;
+    color: white;
+}
+
+body.dark-mode #ToggleMode {
+    background-color: white;
+}
+
+body.dark-mode #Navigator {
+    border-color: white;
+}
+
+body.light-mode {
+    background-color: #d5daf7;
+    color: black;
+}
+
+body.light-mode #ToggleMode {
+    border: 5px solid white;
+    background-color: black;
+}
+
+body.light-mode .circle {
+    background-color: white;
+    border: 3px solid black;
+}
+
+body.light-mode .cubeface {
+    background-color: rgb(255,255,255,0.8);
+    border: 1px solid black;
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+    background-color: #d5daf7;
+}
+
+#Top {
+    height: 7%;
+    background-color: #192338;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: yellow;
+    font-size: 20px;
+}
+
+#Top * {
+    margin: 10px;
+}
+
+#Title {
+    font-family: 'Audiowide', cursive;
+    font-size: 27px;
+    margin-left: 40px;
+    color: white;
+}
+
+#ToggleMode {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 5px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+  
+#Bottom {
+    display: flex;
+    height: 92%;
+}
+
+#Navigator {
+    min-width: 300px;
+    height: 100%;
+    overflow: scroll;
+    background-color: #192338;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#Left {
+    display: flex;
+}
+
+#LinkContainer a {
+    color: #bdebff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#LinkContainer a:hover {
+    color: #ad0000;
+    font-size: 30px;
+    text-decoration-line: overline;
+    text-decoration-line: underline;
+    transition: 0.1s;
+}
+
+#LogoContainer {
+    width: 150px;
+    height: 150px;
+    perspective: 800px;
+    position: relative;
+    text-align: center;
+}
+
+.cube {
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    animation: rotate 8s infinite linear;
+    margin-left: 145px;
+    margin-top: 100px;
+}
+
+.face {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: rgb(0,0,0,0.8);
+    border: 1px solid white;
+}
+
+.cubeface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    transform: translateZ(37.5px);
+}
+
+.circle {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    animation: colorShift 1s infinite ease-in-out;
+    border: 3px solid white;
+}
+
+.back {
+    transform: translateZ(-37.5px) rotateY(180deg);
+}
+
+.left {
+    transform: translateX(-37.5px) rotateY(-90deg);
+}
+
+.right {
+    transform: translateX(37.5px) rotateY(90deg);
+}
+
+.top {
+    transform: translateY(-37.5px) rotateX(90deg);
+}
+
+.bottom {
+    transform: translateY(37.5px) rotateX(-90deg);
+}
+
+.article {
+    background-color: rgb(155,155,155,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+body.light-mode .article {
+    background-color: rgba(22, 37, 122, 0.3);
+}
+
+body.light-mode .article:hover {
+    background-color: rgba(22, 37, 122, 0.5);
+}
+
+.article:hover {
+    background-color: rgb(155,155,155,0.2);
+}
+
+.article a:hover {
+    background-color: #ad0000;
+}
+
+.article a {
+    color: white;
+}
+
+body.light-mode .article a {
+    color: black;
+}
+
+.article #preview {
+    font-size: 15px;
+}
+
+.articleContent {
+    margin: 50px;
+}
+
+#Socials-Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#Socials-Wrapper {
+    display: block;
+    align-items: center;
+    padding: 20px;
+}
+
+.social {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.social:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 0px 0px 40px black;
+  }
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #111826;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #194680;
+    border-radius: 5px;
+    width: 1px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+#LinkContainer {
+    text-align: center;
+    font-size: 20px;
+}
+
+#Content {
+    flex: 1;
+    height: 98%;
+    overflow: scroll;
+    font-size: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
