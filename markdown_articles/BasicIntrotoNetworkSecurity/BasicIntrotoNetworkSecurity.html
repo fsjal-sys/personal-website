@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../styles.css">
+        <link rel="icon" type="image/png" href="../../images/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <title>Ecliptic_Cube - Articles</title>
+    </head>
+
+    <body>
+        <div id="Top">
+            <div id="Left">
+                <div id="Date">Date: </div>
+                <div id="IP">Your IP: </div>
+                <div id="Location"></div>
+            </div>
+            <div id="ToggleMode" onclick="toggleMode()"></div>
+        </div>
+        <div id="Bottom">
+        <div id="Navigator">
+            <div id="LogoContainer">
+                <div class="cube">
+                    <div class="face front cubeface"><div class="circle"></div></div>
+                    <div class="face back cubeface"><div class="circle"></div></div>
+                    <div class="face left cubeface"><div class="circle"></div></div>
+                    <div class="face right cubeface"><div class="circle"></div></div>
+                    <div class="face top cubeface"><div class="circle"></div></div>
+                    <div class="face bottom cubeface"><div class="circle"></div></div>
+                </div>
+                <h1 id="Title">Ecliptic_Cube</h1>
+            </div>
+            <div id="LinkContainer">
+                <a href="../../index.html"><p>Homepage</p></a>
+                <a href="../../articles.html"><p>Articles</p></a>
+                <a href="../..socials.html"><p>Socials</p></a>
+            </div>
+        </div>
+        <div id="Content" class="articleContent">
+            <!--LAST-->
+<h2>Summary</h2>
+<ul>
+<li>
+<h3>Computer Security Concepts</h3>
+<ul>
+<li>Definition, Examples, Challenges</li>
+</ul>
+</li>
+<li>
+<h3>OSI Security Architecture</h3>
+</li>
+<li>
+<h3>Security Attacks</h3>
+<ul>
+<li>Passive Attacks, Active Attacks</li>
+</ul>
+</li>
+<li>
+<h3>Model for Network Security</h3>
+</li>
+<li>
+<h3>Network Security Standards</h3>
+</li>
+<li>
+<h3>Security Services</h3>
+<ul>
+<li>
+<p>Authentication, Access Control</p>
+</li>
+<li>
+<p>Data Confidentiality, Integrity, Availability</p>
+</li>
+<li>
+<p>Non-repudiation</p>
+</li>
+</ul>
+</li>
+<li>
+<h3>Security Mechanisms</h3>
+</li>
+<li>
+<h3>Attack Surfaces and Attack Trees</h3>
+</li>
+</ul>
+<hr>
+
+<h1>A Basic Introduction to Network Security</h1>
+<h2>What is Network Security?</h2>
+<p>Network Security refers to the domain of securing computer networks from threats. It is a subset of <strong>Computer Security</strong>, involving any activity designed to protect the usability and integrity of an organisation's network and data. </p>
+<h3>Importance of Network Security</h3>
+<p>Organisations need computers to perform their operations. Computers are devices which are used to efficiently process data. In a corporate office, workers can create documents and keep track of important information using computers. Computers also allow them to communicate with their co-workers or their bosses. In a school, computers are used to keep track of the students' classes and grades by storing that information in databases. Computers are also useful in educating students. At a cafe business, a computer is used to track orders and employee wages. The cafe might even provide its customers with Wi-Fi access, so that the customers can make better use of their own personal computers when they are within the cafe establishment. Ultimately, computers allow us to read and alter data which is very useful in getting our work done.</p>
+<p>There are times when it will be in our interest to exert a desired level of control over the data that our computers process. If we go back to the corporate office example, we can assume that the office is probably using a computer to store important information about its employees. This information is valuable to both the organisation as a whole and the employees who work for the organisation. The organisation needs this information to manage its employees and the employees value this information because there can be a lot of risk if this information ends up in the wrong hands i.e. a criminal could use this information to impersonate and commit fraud. Computers process data which are valued by people and organisations. The value of this data incentivises people and organisations to invest in securing this data i.e. organisations have an incentive for <strong>Computer Security</strong>.</p>
+<p>Organisations possess multiple computers, which transfer data with each other regularly. These computers which all transfer data with each other will collectively form an organisation's network. If an organisation acquires a new computer, that computer will become a part of its exclusive network and it will gain the ability to exchange data with the other computers on the network. It gains a foothold into the organisation's network, allowing it to have the ability of accessing the organisation's valued data. If a network is capable of exposing valued data to new computers as long as those computers join the network, then the organisation will have an incentive to secure the network. <strong>The organisation wants to secure its computer data which also entails wanting to secure the network that those computers are a part of.</strong> Organisations have an incentive for <strong>Network Security</strong>. Network Security is a subset of Computer Security, concerned with accomplishing the goals of Computer Security through the securing of the network.</p>
+<p>Computer Security is concerned fundamentally with the security of data on a computer system. Network Security is more specific, concerning itself with a set of technologies that protect the usability and integrity of a company's infrastructure by preventing the entry or proliferation within a network by an unauthorised entity.</p>
+<h2>Network Layers and Related Attacks</h2>
+<p>When a system is being attacked, the attacks correspond with the network layers involved with the system. When we talk about network layers, we are referring to the classifications laid out by the <strong>OSI Model</strong> and the <strong>TCP/IP Model</strong>. The OSI model is a conceptual guideline for interpreting computer networking. When we analyse something in a computer which involves networking, we can refer to the OSI model or the TCP/IP Model to help us better understand it in more depth by figuring out which layer is in correspondence.</p>
+<p>The layers of the OSI Model and the TCP/IP Model are shown in the diagram below:</p>
+<p>![[1.png]]</p>
+<p>As you can see in the diagram, each layer corresponds with a number of protocols. These protocols are sets of rules which allow services to run on each layer. For example, the HTTP protocol establishes rules for displaying webpages. It is a protocol that exists on the Application Layer of the OSI and TCP/IP Model. If we are analyzing a web browser which is fetching webpages (which uses the HTTP protocol), then we can refer to the OSI Model and/or the TCP/IP model to establish that this is service which exists on the Application Layer.</p>
+<p>Similarly if there is an attack on a webpage, then we can refer to the OSI Model and the TCP/IP model to establish the attack as an Application Layer attack. </p>
+<p>Let's take the point of view of an attacker. Suppose that an attacker wants to attack a website. Websites consist of webpages, and the HTTP protocol is the set of rules which allow those webpages to be fetched by browsers. The HTTP protocol corresponds with the Application Layer. So if we want to devise an effective attack then we will want to understand the Application Layer more deeply, as our attack will have to be designed for the Application Layer.</p>
+<p>Let's take the point of a defender. Suppose that we want to defend a website hosted on a system from attacks. Obviously classifying these attacks would be an important step. The website is what we are trying to defend and websites exist on the Application Layer, so we will devise a line of defence specifically for the Application Layer.</p>
+<p>This is the importance of the OSI Model and the TCP/IP Model when it comes to Network Security. These models allow us to classify the different components which make a system's networking capabilities. Attacks on networks are going to involve these different components, so both attackers and defenders can refer to these models to help them accomplish their respective security goals.</p>
+<h2>Basic Computer Security Concepts</h2>
+<h4>Computer Security and Network Security</h4>
+<p>Network Security and Computer Security are not necessarily the same things. Networking Security can be thought of as a subset of Computer Security. We can think of this relationship similarly to the relationship between the English language and writing. Writing is an important aspect of the English language, but it is a subset of the English language. The English language is a broader concept which does not just consist of writing. For example, speaking is also an important aspect of the English language yet it is separate from writing. Similarly, Network Security is an important aspect of Computer Security, but Computer Security is a more broad concept which encompasses Network Security. Just like with English writing, one should have the necessary prerequisite knowledge of the broader English language in order to effectively understand how to write in the English language. When it comes to Network Security, having a basic understanding of Computer Security will make it more effective for one to understand Network Security.</p>
+<p>According to the NIST Computer Security Handbook, Computer Security is defined as:</p>
+<p>"The protection afforded to an automated information system to attain the applicable objectives of preserving the integrity, availability, and confidentiality of information system resources (hardware, software, firmware, information/data, and telecommunications)."</p>
+<p>Prior to the widespread use of data processing equipment, the security of valuable information on a computer system was primarily concerned with physical security. If you had a computer with important data on it but no networking involved, then the only possible ways to access that data would be physically. Maybe you would physically operate the computer or transfer the data onto a physical storage medium. Computer Security is fundamentally concerned with the <strong>security of data</strong> on a computer system. That is how the concept of Computer Security originated, with the protection of data as a priority even prior to the proliferation of computer networks. Internet Security on the other hand is more specific with the protection of data. It does not merely concern the protection of data in general, rather the protection of the transmission of data over the Internet. Internet Security consists of the <strong>measures to deter, prevent, detect, and correct security violations that involve the transmission of information.</strong></p>
+<p>Computer security is concerned fundamentally with the security of data on a computer system. Network Security is more specific, concerning itself with a set of technologies that protect the usability and integrity of a company's infrastructure by preventing entry or proliferation within a network of a wide variety of potential threats. Network Security is <strong>any activity designed to protect the usability and integrity of an organization's network and data, including hardware and software technologies.</strong></p>
+<h2>Model for Network Security</h2>
+<h4>Computer Security Objectives</h4>
+<p>The CIA triad is a very common model used to identify the objectives in securing a computer system. The CIA triad consists of three major domains for which the acronym CIA is formed: Confidentiality, Integrity, and Availability. A more comprehensive model adds two more major domains: Accountability and Authenticity. We will outline each domain briefly:</p>
+<p>Confidentiality:</p>
+<ul>
+<li>Data confidentiality assures that private or confidential information is not disclosed to <strong>unauthorized</strong> individuals.</li>
+</ul>
+<p>Integrity:</p>
+<ul>
+<li>Data integrity assures that data can only be altered in an authorized manner. Data cannot be tampered with or changed by <strong>unauthorized</strong> individuals or by <strong>unauthorized</strong> processes.</li>
+</ul>
+<p>Availability:</p>
+<ul>
+<li>Data availability assures that data is available to be accessed by authorized individuals or processes. There cannot be any denial of service or limitation of the data's availability.</li>
+</ul>
+<p>Accountability:</p>
+<ul>
+<li>Accountability assures that the actions of an entity in a system are traced in such a way where the actions of an entity can be uniquely identified with that particular entity.</li>
+</ul>
+<p>Authenticity:</p>
+<ul>
+<li>Authenticity verifies that users are who they say are and that each input entering a system comes from a trusted source.</li>
+</ul>
+<h4>Breach of Security - Levels of Impact</h4>
+<p>When the security of a system is breached, we will want to understand the impact of the breach in order to mitigate the effects of the attack. Generally, there are three levels of impact:</p>
+<ol>
+<li>
+<p>High Impact</p>
+<ul>
+<li>
+<p>The loss of the organization as a result of the security breach is expected to have severe consequences on the organization's operations, their assets, and/or individuals associated.</p>
+</li>
+<li>
+<p>An example might be a breach which resulted in the unauthorized transfer of an organization's employee database to an unknown system. This database contains employees' addresses, social security numbers, and other personally identifiable information. This has severe consequences for the organization's employees and the organization's operations, making this security breach have a high impact.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Moderate Impact</p>
+<ul>
+<li>
+<p>The loss of the organization as a result of the security breach is expected to have serious consequences on the organization's operations, assets, and/or individuals associated.</p>
+</li>
+<li>
+<p>An example might be a strong DDOS attack on an organization built around a social media website. The organization's operations heavily revolve around the servicing of this website to users, so if the website is forced to go offline for a long time due to a sophisticated DDOS attack then it can be assumed that the organization's operations and asset (the asset being the website) have been severely impacted. However, this situation is still resolvable as opposed to a high impact which can have more permanent consequences.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Low Impact</p>
+<ul>
+<li>
+<p>The loss of the organization as a result of the security breach is expected to have limited consequences on the organization's operations, assets, and/or individuals associated.</p>
+</li>
+<li>
+<p>An example might be a DDOS attack on the website of a large retailer such as Walmart. Suppose that this DDOS attack only effects the Walmart servers which are responsible for the online Walmart career applications. Walmart's most valuable assets are it's real estate, merchandise, etc. It isn't tied to the availability of a website. On top of that, Walmart can hire employees by hosting in-person hiring events so they do not need to rely solely on online applications for the purpose of acquiring new employees. This DDOS attack is also likely to be resolved appropriately as Walmart likely has an established cyber security team. The impact of this security breach does not severely effect the organization at all, thus it has a low impact.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2>OSI Security Architecture</h2>
+<p>The OSI Security Architecture defines a systematic approach to providing security at each layer of the OSI model. It involved defining <strong>security services</strong> and <strong>security mechanisms</strong> which can be present at each layer to provide effective security against attacks which occur in those respective layers.</p>
+<h4>Security Attacks</h4>
+<p>As we defined it earlier, security attacks are basically any action which compromises the security of data which is valued by an organization. If there is an action which effects the confidentiality, integrity, availability, authenticity, and/or accountability of data which is valued by an organization, then we can confidently classify it as a security attack.</p>
+<p>Generally there are two sub-classifications of security attacks: <strong>passive</strong> and <strong>active</strong>.</p>
+<p>A <strong>passive attack</strong> is any action concerned with acquiring information from a system without directly affecting the system. Passive attacks can be a form of reconnaissance on a target, acquiring knowledge of a system's potential vulnerabilities prior to actively attacking the system. </p>
+<p>Thus we can say that passive attacks are in the nature of eavesdropping on or monitoring transmissions. The goal of the attacker when carrying out a passive attack is to obtain information that is being transmitted.</p>
+<p>Two types of passive attacks are the release of message contents and traffic analysis. When it comes to the release of message contents, an unauthorized party may conduct a passive attack when the exposure of the transmission contents are disclosed to that unauthorized party. Traffic analysis if another form of a passive attack which focuses more on observing patterns, volumes and the behaviours of data transmissions without necessarily understanding the specific message contents. So with the release of message contents, the attacker's main objective is to intercept and read the actual message contents being transmitted. With traffic analysis, the attacker's main objective is to derive meaningful information from the analysis of traffic patterns, such as identifying communication patterns, user behaviours, and/or system vulnerabilities.</p>
+<p>Specific techniques used in passive attacks are listed below:</p>
+<ol>
+<li>
+<p>Eavesdropping</p>
+<ul>
+<li>The unauthorized interception of communications in order to read the actual contents of the message being transmitted i.e. the unauthorized release of of message contents.</li>
+</ul>
+</li>
+<li>
+<p>IP Spoofing</p>
+<ul>
+<li>The falsifying of the source address in a network packet to make it appear as if it originated from a source which it did not originally come from. </li>
+</ul>
+</li>
+<li>
+<p>Packet Sniffing</p>
+<ul>
+<li>The capturing and analyzing of network packers in order to access and understand the data being transmitted. This can be thought of as a specific form of eavesdropping.</li>
+</ul>
+</li>
+<li>
+<p>Tapping</p>
+<ul>
+<li>The physical interception of actual communications cables or network devices in order to gain unauthorized access to the data that is being transmitted through those communications cables.</li>
+</ul>
+</li>
+<li>
+<p>Traffic Analysis</p>
+<ul>
+<li>The analysis of patterns in data transmissions to deduce information about the communications flow, even without understanding the actual content. More concerned with deriving information from how the content is presented.</li>
+</ul>
+</li>
+</ol>
+<p>An <strong>active attack</strong> is such that attempts to actually alter the system resources. As opposed to a passive attack which would attempt to acquire knowledge about the vulnerabilities of a system, an active attack would involve the actual exploitation of those vulnerabilities.</p>
+<p>Unlike a passive attack, active attacks will always involve some kind of modification of the data stream or the creation of a false stream. These attacks are difficult to prevent due to the wide variety of possible attack surfaces and the wide variety of potential physical, software, and network vulnerabilities. </p>
+<p>Some specific types of active attacks include:</p>
+<ol>
+<li>
+<p>Masquerade</p>
+<ul>
+<li>A masquerade attack involves the attacker pretending to be someone who they actually are not, in order to somehow alter the system in unauthorized manner. </li>
+</ul>
+</li>
+<li>
+<p>Replay</p>
+<ul>
+<li>A replay involves the passive capture of a data unit and its subsequent retransmission to produce and unauthorized effect onto the system.</li>
+</ul>
+</li>
+<li>
+<p>Modification of Messages</p>
+<ul>
+<li>The modification of messages occurs when some portion of a legitimate message is altered or messages are delayed or reordered to produce and unauthorized effect.</li>
+</ul>
+</li>
+<li>
+<p>Denial of Service</p>
+<ul>
+<li>The denial of service inhibits the normal use of a service on a network by diminishing its ability to communicate with users, usually through exhausting the network's capabilities.</li>
+</ul>
+</li>
+</ol>
+<h4>Security Services</h4>
+<p>So we have established that a <strong>security attack</strong> can be defined as any action which compromises the security of the information which is valued by an organisation. <strong>Security solutions</strong> are the solutions that organisations can implement in order to curtail security attacks. Security solutions involve <strong>security services</strong> and <strong>security mechanisms</strong>. </p>
+<ul>
+<li>
+<p><strong>Security Service:</strong> The processing or communication service which enhances the security of the data processing systems and the information transfers of an organisation. These services are intended to counter against security attacks.</p>
+</li>
+<li>
+<p><strong>Security Mechanism:</strong> The process that is designed to detect, prevent, or recover from a security attack. </p>
+</li>
+</ul>
+<p>These security solutions are meant to be solutions to the problems posed by security threats and security attacks. As defined by the RFC 4949 document:</p>
+<ul>
+<li>
+<p><strong>Threat</strong>: A potential violation of security which existed where there is a circumstance, capability, action, or event that could breach security and cause harm. A thread is a possible danger that might exploit a vulnerability.</p>
+</li>
+<li>
+<p><strong>Attack</strong>: An assault on system security that derives from an intelligent threat. An intelligent act that is a deliberate attempt to evade security services and violate the security policy of a system.</p>
+</li>
+</ul>
+<p>A security service is a specific service deployed by an organisation to enhance the security on their network. Just like how networks have many services present within them, such as the HTTP service for providing access to webpages or the FTP service for providing means to transfer files, networks can also have security services which provide better security to the network.</p>
+<p><strong>The X.800 framework from the OSI Security Architecture</strong> defines a security service as:</p>
+<ul>
+<li>
+<p>A service provided by a protocol layer of communicating open systems which ensures an adequate security of the systems or of the data transfers within an open systems network.</p>
+</li>
+<li>
+<p>The OSI Model conceptualises a communications system as consisting of several layers. A security service is a dedicated feature within these layers which ensures that the systems and the data they transfer are adequately protected against unauthorised security attacks and their consequences.</p>
+</li>
+</ul>
+<p><strong>The RFC 4949 document published by the IETF (Internet Engineering Task Force)</strong> defines a security service as:</p>
+<ul>
+<li>
+<p>A processing or communication service which is provided by the system to give a specific kind of protection to system resources.</p>
+</li>
+<li>
+<p>The RFC 4949 documents implies that security services are services that actively run on a network in order to safeguard the system resources.</p>
+</li>
+</ul>
+<h5>Security Services Categories</h5>
+<p>Since there is a wide variety of potential network security risks, then there must also be a variety of security services to actively protect against these security risks. We can categorise security services as follows:</p>
+<ol>
+<li>
+<p>Authentication</p>
+</li>
+<li>
+<p>Access Control</p>
+</li>
+<li>
+<p>Data Confidentiality</p>
+</li>
+<li>
+<p>Data Integrity</p>
+</li>
+<li>
+<p>Availability</p>
+</li>
+<li>
+<p>Nonrepudiation</p>
+</li>
+</ol>
+<p><strong>Authentication</strong></p>
+<p>Authentication security services are concerned with the assurance that a communication within a network is authentic i.e. the message source is not obscured and is the true source. In the case of a single message, an authentication security service must assure the recipient that the message is from the source which the message claims to be from. In the case of an ongoing interaction, an authentication security service assures that the two entities are authentic and that the connection is not being interfered with by an unauthorised party. A third party cannot be allowed to masquerade as one of the two legitimate parties.</p>
+<p><strong>Access Control</strong></p>
+<p>Access control security services are committed to limiting and control the access to host systems and applications through communications links. To achieve this, each entity trying to gain access to a host must first be authenticated and have their access rights be tailored specifically based on the user's specific type of authorisation.</p>
+<p><strong>Data Confidentiality</strong></p>
+<p>Data confidentiality security services are meant to ensure the protection of transmitted data from passive attacks. A passive attack is an attack concerned with the unauthorised revealing or reading of data. A data confidentiality security service wants to make sure that the data is kept confidential so that it is only restricted to authorised parties. Data confidentiality security services can even prevent an attack from being unable to observe the source, destination, and other information regarding the traffic on a network.</p>
+<p><strong>Data Integrity</strong></p>
+<p>Data integrity security services ensure the integrity of data on their network. They make sure that the data on the network is not altered or modified by an unauthorised third party. This can apply to a stream of messages, a single message, or elected fields within a message. A <strong>connection-oriented</strong> integrity service deals with a stream of messages and assures that messaged are received as sent with no duplication, insertion, modification, rendering or replays. A <strong>connectionless</strong> integrity service deals with individual messages without regard to any larger context, protecting against message modification only.</p>
+<p><strong>Availability</strong></p>
+<p>Availability security services ensure that the property of a system or a system resource is made available to be accessed upon demand by an authorised system entity. A common attack which these services protect against are DDOS attacks.</p>
+<p><strong>Non-repudiation</strong></p>
+<p>Non-repudiation security services prevent either sender or receiver from denying a transmitted message. When a message is sent, the receiver can prove that the alleged sender did actually send that message. Likewise, the sender can prove that the recipient did actually receive the message.</p>
+<h4>Security Mechanisms</h4>
+<p>We have established that security services are meant to actively enhance the security of a system. However, these services must be implemented into the system in the first place. This is where the security mechanisms come into play, they are methods, tools, or processes which actually implement and enforce the security services. A particular security mechanism is capable of enforcing several security services. Think about how fast food is a service, and a fast food establishment consists of many different employees under different types of roles. These employees work to actually provide their respective fast food services. A cashier provides the service of transactions, allowing customers to make purchases. The fry cooks implement the creation of the menu items, allowing for the customers to be served. A security service is a broader security enhancement which must be implemented by a security mechanism. A particular security mechanism may implement or enforce several different security services. This is illustrated in the diagram below:</p>
+<p>![[2.png]]</p>
+<p>Security services and the security mechanisms which implement those services, are meant to ensure the security of a system from security threats and attacks. When designing a secure system, the security services and security mechanisms must be taken into account. The National Centres of Academic Excellence in Information Assurance/Cyber Defence, list the following as fundamental security design principles:</p>
+<ul>
+<li>
+<p>Economy of Mechanism</p>
+</li>
+<li>
+<p>Fail-sage defaults</p>
+</li>
+<li>
+<p>Complete mediation</p>
+</li>
+<li>
+<p>Open design separation of privilege</p>
+</li>
+<li>
+<p>Least privilege</p>
+</li>
+<li>
+<p>Least common mechanism</p>
+</li>
+<li>
+<p>Psychological acceptability</p>
+</li>
+<li>
+<p>Isolation</p>
+</li>
+<li>
+<p>Encapsulation</p>
+</li>
+<li>
+<p>Modularity</p>
+</li>
+<li>
+<p>Layering</p>
+</li>
+<li>
+<p>Least astonishment</p>
+</li>
+</ul>
+<p>These design principles limit the <strong>attack surfaces</strong> that will be present in a system. An attack surface is a reachable and exploitable vulnerability in a system. </p>
+<p>Examples include: </p>
+<ul>
+<li>
+<p>An open port on an outward facing web server is a surface which is made reachable to external users. This web server is a part of the organisation's network which is reachable, making it a potential attack surface. </p>
+</li>
+<li>
+<p>Services available on the inside of a firewall.</p>
+</li>
+<li>
+<p>Code that processes incoming data, email, XLM, office documents, and industry-specific custom data exchange formats.</p>
+</li>
+<li>
+<p>Interfaces SQL, and web forms.</p>
+</li>
+<li>
+<p>An employee with access to sensitive information vulnerable to a social engineering attack.</p>
+</li>
+</ul>
+<p>We can categorise attack surfaces:</p>
+<ul>
+<li>
+<p><strong>Network Attack Surface</strong>: Attack surfaces which are reachable over an enterprise network, wide-area network, or the Internet.</p>
+</li>
+<li>
+<p><strong>Software Attack Surface</strong>: Attack surfaces which are reachable in the software of an organisation. These are vulnerabilities that exist in the applications, utilities, or operating system code.</p>
+</li>
+<li>
+<p><strong>Human Attack Surface</strong>: Attack surfaces which are reachable through the personnel associated with the organisation. These vulnerabilities include social engineering, human error, and trusted insiders.</p>
+</li>
+</ul>
+<p>The risks involved with attack surfaces can depend on the layering implemented in a system. This is illustrated in he diagram below:![[3.png]]</p>
+<p>When a system is attacked, there is a sequence of actions that usually unfold relative to the particular scenario. An <strong>attack tree</strong> is used to portray these sequences by breaking down and analysing the different paths that an attacker might take to compromise a system or achieve a specific goal. </p>
+<ul>
+<li>
+<p>Attack trees are represented by branching hierarchical data structures which showcase the <strong>set of potential techniques for exploiting</strong> security vulnerabilities.</p>
+</li>
+<li>
+<p>The <strong>security incident</strong> is represented in an attack tree as the root node. A security incident is the goal of the attack.</p>
+</li>
+<li>
+<p>The different ways that the attacker can reach that goal are iteratively and incrementally represented as branches and subnodes of the attack tree.</p>
+</li>
+<li>
+<p>The final nodes on the oaths outward from the root, the leaf nodes, represent the different ways that the attacker may initiate the attack.</p>
+</li>
+<li>
+<p>Branches can be labelled with values representing the difficulty, cost, or other attributes, so that alternative attacks can be compared.</p>
+</li>
+</ul>
+<h4>Security Standards</h4>
+<p>The most popular sets of security standards include the NIST (National Institute of Standards and Technology) and ISOC (Internet Society) standards. </p>
+<p><strong>NIST</strong>:</p>
+<ul>
+<li>
+<p>NIST is a U.S. federal agency that deals with the measurement science, standards, and technology related to the U.S. government's uses and the promotion of U.S. private-sector innovation.</p>
+</li>
+<li>
+<p>NIST Federal Information Processing Standards (FIPS) and Special Publications (SP) have a worldwide impact.</p>
+</li>
+</ul>
+<p><strong>ISOC</strong>:</p>
+<ul>
+<li>
+<p>ISOC is a professional membership society with worldwide organisational and individual membership.</p>
+</li>
+<li>
+<p>Provides leadership in addressing issues that confront the future of the Internet and is home to the groups responsible for Internet infrastructure standards, including the IETF and the IAB.</p>
+</li>
+<li>
+<p>ISOC publishes Internet standards and related specifications as RFS (Requests for Comments).</p>
+</li>
+</ul>        </div>
+        </div>
+        <script src="../../script.js"></script>
+    </body>
+</html>
